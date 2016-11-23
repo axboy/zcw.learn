@@ -7,7 +7,6 @@ cd hello
 cordova platforms add android
 ```
 
-学习这块内容时，当时使用的是eclipse，现在使用的是android studio2.0操作的
 用android studio导入eclipse adt项目，文件夹选到.../hello/platforms/android/
 用eclipse直接导入android项目即可
 
