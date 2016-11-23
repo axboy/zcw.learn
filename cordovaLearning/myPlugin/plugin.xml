@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="net.kingsilk.plugin" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>myPlugin</name>
+    <js-module name="myPlugin" src="www/myPlugin.js">
+        <clobbers target="myPlugin" />
+    </js-module>
+
+    <platform name="android">
+        <source-file src="src/android/PhoneInfo.java" target-dir="src/net/kingsilk/plugin"/>
+        
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="PhoneInfo">
+                <param name="android-package" value="net.kingsilk.plugin.PhoneInfo"/>
+            </feature>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/*">  
+            <uses-permission android:name="android.permission.READ_PHONE_STATE" />  
+        </config-file>
+    </platform>
+</plugin>
