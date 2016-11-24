@@ -13,21 +13,21 @@ import org.json.JSONException;
  */
 public class PhoneInfo extends CordovaPlugin {
 
-    //private TelephonyManager tm = (TelephonyManager) this.cordova.getActivity().getSystemService(Context.TELEPHONY_SERVICE);
+	//private TelephonyManager tm = (TelephonyManager)this.cordova.getActivity().getSystemService(Context.TELEPHONY_SERVICE);
 
-    @Override
-    public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-        callbackContext.success(this.getPhoneNum());
-        return true;
-    }
+	@Override
+	public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+		callbackContext.success(this.getPhoneNum());
+		return true;
+	}
 
-    /**
-     * 获取手机号
-     *
-     * @return
-     */
-    public String getPhoneNum() {
-        //return tm.getLine1Number();
-        return "182xxxx1234";
-    }
+	/**
+	 * 获取手机号
+	 *
+	 * @return
+	 */
+	public String getPhoneNum() {
+		TelephonyManager tm = (TelephonyManager)this.cordova.getActivity().getSystemService(Context.TELEPHONY_SERVICE);
+		return tm.getLine1Number();
+	}
 }

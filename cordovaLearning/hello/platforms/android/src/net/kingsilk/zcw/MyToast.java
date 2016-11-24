@@ -15,7 +15,7 @@ public class MyToast extends CordovaPlugin{
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
 
         Activity activity = cordova.getActivity();
-
+        System.out.println(action);
         if (action.equals("javaShow")) {
             //java 显示内容
             Toast.makeText(activity, "java show...", Toast.LENGTH_SHORT).show();

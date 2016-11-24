@@ -27,4 +27,7 @@
     <feature name="PhoneInfo">
         <param name="android-package" value="net.kingsilk.plugin.PhoneInfo" />
     </feature>
+    <feature name="SmartlinkDemo">
+        <param name="android-package" value="net.kingsilk.zcw.SmartlinkDemo" />
+    </feature>
 </widget>
