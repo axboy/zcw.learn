@@ -46,3 +46,14 @@ var succ = function(resp) {
 var err = function(resp) {
 	alert('err:' + resp);
 };
+
+///////新测试页面
+var realStart = function(){
+    var ssid = $("#ssid").val();
+    var passwd = $("#passwd").val();
+    show(succ, err, "SmartlinkDemo", "start", [ssid, passwd]);
+};
+
+var getSSID = function(){
+    show(function(resp){ $("#ssid").val(resp);}, err, "SmartlinkDemo", "getSSID", []);
+};
