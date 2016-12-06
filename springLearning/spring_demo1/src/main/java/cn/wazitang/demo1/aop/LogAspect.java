@@ -31,8 +31,8 @@ public class LogAspect {
         System.out.println("注解式拦截" + action.name());
     }
 
-    //TODO 下行待查
-    @Before("execution(cn.wazitang.demo1.aop.DemoMethodService.save)")
+    //TODO 下行待查，cn前一定要有空格
+    @Before("execution(* cn.wazitang.demo1.aop.DemoMethodService.*(..))")
     public void before(JoinPoint joinPoint) {
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();
         Method method = signature.getMethod();

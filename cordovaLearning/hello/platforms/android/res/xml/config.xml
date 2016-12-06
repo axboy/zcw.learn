@@ -30,4 +30,7 @@
     <feature name="SmartlinkDemo">
         <param name="android-package" value="net.kingsilk.zcw.SmartlinkDemo" />
     </feature>
+    <feature name="smart">
+        <param name="android-package" value="net.kingsilk.www.SmartConfigPlugin" />
+    </feature>
 </widget>

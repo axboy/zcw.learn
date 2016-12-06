@@ -11,8 +11,8 @@ public class Main {
         DemoAnnotationService demoAnnotationService = context.getBean(DemoAnnotationService.class);
         demoAnnotationService.save();
 
-        //DemoMethodService demoMethodService = context.getBean(DemoMethodService.class);
-        //demoMethodService.save();
+        DemoMethodService demoMethodService = context.getBean(DemoMethodService.class);
+        demoMethodService.save();
         context.close();
     }
 }

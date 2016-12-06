@@ -14,5 +14,13 @@
         },
         "is_top_level": true,
         "variables": {}
+    },
+    "cordova-smartConfig": {
+        "source": {
+            "type": "local",
+            "path": "d:\\cordova-smartConfig"
+        },
+        "is_top_level": true,
+        "variables": {}
     }
 }

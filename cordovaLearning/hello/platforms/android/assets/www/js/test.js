@@ -18,6 +18,17 @@ var phoneInfo = function() {
 	myPlugin.phoneInfo(null, succ, err);
 };
 
+var testSmart = function(){
+    smart.ssid([], succ, err);
+};
+
+var testLink = function(){
+    smart.start({ssid:'aaa',password:'bbb'},function(data){
+    var obj = JSON.parse(data);
+    alert(data);alert(data.code);alert(obj.code);
+    },err);
+}
+
 var goActivity = function() {
 	show(succ, err, "SmartlinkDemo", "goActivity", []);
 };

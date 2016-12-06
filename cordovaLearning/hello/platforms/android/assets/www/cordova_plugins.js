@@ -7,13 +7,22 @@ module.exports = [
         "clobbers": [
             "myPlugin"
         ]
+    },
+    {
+        "id": "cordova-smartConfig.smart",
+        "file": "plugins/cordova-smartConfig/www/smart.js",
+        "pluginId": "cordova-smartConfig",
+        "clobbers": [
+            "smart"
+        ]
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
     "cordova-plugin-whitelist": "1.3.0",
-    "net.kingsilk.plugin": "0.0.1"
+    "net.kingsilk.plugin": "0.0.1",
+    "cordova-smartConfig": "0.0.2"
 };
 // BOTTOM OF METADATA
 });

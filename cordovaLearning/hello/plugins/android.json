@@ -12,6 +12,9 @@
         },
         "net.kingsilk.plugin": {
             "PACKAGE_NAME": "io.cordova.hellocordova"
+        },
+        "cordova-smartConfig": {
+            "PACKAGE_NAME": "io.cordova.hellocordova"
         }
     },
     "dependent_plugins": {}
