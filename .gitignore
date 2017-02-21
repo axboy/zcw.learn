@@ -1,0 +1,15 @@
+target
+target-eclipse
+build
+node_modiles
+.project
+.classpath
+*.log
+*.iml
+*.ipr
+*.iws
+*.swp
+.idea
+.DS_Store
+.gradle
+.tmp
