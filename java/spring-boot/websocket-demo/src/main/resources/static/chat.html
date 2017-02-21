@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat</title>
+</head>
+<body>
+<p>
+    聊天室
+</p>
+<p>
+    用户名：<input type="text" id="name">
+</p>
+<p>
+    接收人：<input type="text" id="recName">
+</p>
+<div>
+    <button id="connect" onclick="connect();">连接</button>
+    <button id="disconnect" disabled="disabled" onclick="disconnect();">断开连接</button>
+</div>
+<form id="wiselyForm">
+    <textarea rows="4" cols="60" name="text"></textarea>
+    <input type="submit"/>
+</form>
+<div id="output"></div>
+
+<script src="./sockjs.min.js"></script>
+<script src="./stomp.min.js"></script>
+<script src="./jquery.js"></script>
+<script>
+    $('#wiselyForm').submit(function (e) {
+        e.preventDefault();
+        var text = $('#wiselyForm').find('textarea[name="text"]').val();
+        sendSpittle(text);
+    });
+
+    /*
+    var sock = new SockJS("/endpointChat"); //1
+    var stomp = Stomp.over(sock);
+    stomp.connect('guest', 'guest', function (frame) {
+        stomp.subscribe("/user/queue/notifications", handleNotification);//2
+    });
+    function handleNotification(message) {
+        $('#output').append("<b>Received: " + message.body + "</b><br/>")
+    }
+*/
+
+    var stompClient = null;
+    function sendSpittle(text) {
+        var rec = $("#recName").val();
+        stompClient.send("/chat", {}, JSON.stringify({'toUser': rec, "msg": text}));
+    }
+
+    $('#stop').click(function () {
+        sock.close()
+    });
+
+
+    function connect() {
+        var name = $("#name").val();
+        var socket = new SockJS('/endpointChat'); //1
+        stompClient = Stomp.over(socket);
+        stompClient.connect({}, function (frame) {
+            setConnected(true);
+            console.log('Connected: ' + frame);
+            stompClient.subscribe('/user/' + name + '/message', function (respnose) { //订阅/user/xxx/chat
+                console.log(respnose.body);
+                //showResponse(JSON.parse(respnose.body).msg);
+                //showResponse(respnose);
+            });
+        });
+    }
+
+    function disconnect() {
+        if (stompClient != null) {
+            stompClient.disconnect();
+        }
+        setConnected(false);
+        console.log("Disconnected");
+    }
+
+    function setConnected(connected) {
+        document.getElementById('connect').disabled = connected;
+        document.getElementById('disconnect').disabled = !connected;
+        //document.getElementById('conversationDiv').style.visibility = connected ? 'visible' : 'hidden';
+        //$('#response').html();
+    }
+</script>
+</body>
+</html>

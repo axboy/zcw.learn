@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>auth login</title>
+</head>
+<body>
+<h1>auth login</h1>
+<p th:if="${param.logout}" class="alert">You have been logged out</p>
+<p th:if="${param.error}" class="alert alert-error">There was an error, please try again</p>
+<h2>Login with Username and Password</h2>
+<!--j_spring_security_check-->
+<form name="form" th:action="@{/j_spring_security_check}" action="/j_spring_security_check" method="POST">
+    <fieldset>
+        <input type="text" name="j_username" value="" placeholder="Username"/>
+        <input type="password" name="j_password" placeholder="Password"/>
+    </fieldset>
+    <input type="submit" id="login" value="Login"
+           class="btn btn-primary"/>
+</form>
+<ul> users :
+    <li>a_admin/a_admin</li>
+    <li>a_user/a_user</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>WeiXin Login</title>
+</head>
+<body>
+<h2>Virtual WeChat Authentication</h2>
+<form name="form" th:action="@{/wxLogin}" action="/wxLogin" method="GET">
+    <input type="text" name="username" value="" placeholder="username"/>
+    <input type="submit" id="ok" value="ok"
+           class="btn btn-primary"/>
+    <input type="button" id="cancel" value="cancel" click=""
+           class="btn btn-primary"/>
+</form>
+</body>
+</html>

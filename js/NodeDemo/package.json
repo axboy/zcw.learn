@@ -1,0 +1,11 @@
+{
+  "name": "NodeDemo",
+  "version": "1.0.0",
+  "description": "its description",
+  "main": "hello.js",
+  "author": "zcw",
+  "dependencies": {},
+  "engines": {
+	"node":"*"
+  }
+}

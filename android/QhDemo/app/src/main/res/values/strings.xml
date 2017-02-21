@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">钱皇消毒柜</string>
+    <string name="title_activity_setting_device">SettingDeviceActivity</string>
+</resources>
