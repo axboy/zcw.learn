@@ -21,14 +21,17 @@
        http://a.localhost:10010/oauth/authorize?response_type=code&client_id=my-client&redirect_uri=http://a.localhost:10010，
         授权,取得code
     2. 控制台输入
-        ```shell
+    
+        ```
             curl -d grant_type=authorization_code \
                  -d redirect_uri=http://a.localhost:10010 \             //该地址要和前一步授权时的匹配
                  -d client_id=my-client -d code=xxxxx \                 //上一部取得的code替换xxxxxx
                   http://my-client:my-secret@a.localhost:10010/oauth/token
         ```
+        
         取得token，格式如下
-        ```js
+        
+        ```
             {
                 "access_token":"52b2a108-1545-4073-8525-30b2ab104cdc",
                 "token_type":"bearer",
