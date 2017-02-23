@@ -62,8 +62,8 @@ public class OAuth2ResourceServerConf extends ResourceServerConfigurerAdapter {
         //同注释，默认/o2/**以外的路径都被保护
         //super.configure(http);
         http.requestMatchers().antMatchers("/o2/**")
-//                .and()
-//                .authorizeRequests().antMatchers("/o2/photo").access("#oauth2.hasScope('login')")
+                .and()
+                .authorizeRequests().antMatchers("/o2/photo").access("#oauth2.hasScope('login')")
                 .and()
                 .authorizeRequests().anyRequest().permitAll();
     }

@@ -21,27 +21,13 @@ public class AuthController {
     @ResponseBody
     //@PreAuthorize("permitAll")
     //@PermitAll
-    @RolesAllowed({"USER", "ADMIN"})
+    //@RolesAllowed({"USER", "ADMIN"})
     public String index(Principal curUser) {
         String userName = "unLogin";
         System.out.print(curUser);
         if (curUser != null) {
             userName = curUser.getName();
         }
-        return "Hello! =============" + userName + "--------" + new Date();
-    }
-
-    @RequestMapping("/sec")
-    @ResponseBody
-    @PreAuthorize("permitAll")
-    public String sec() {
-        return "sec         " + new Date();
-    }
-
-    @RequestMapping("/test")
-    @ResponseBody
-    @PreAuthorize("isAuthenticated()")
-    public String test() {
-        return "test";
+        return "Hello! =============" + userName;
     }
 }

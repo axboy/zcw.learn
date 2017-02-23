@@ -50,7 +50,7 @@ public class OAuth2AuthorizationServerConf extends AuthorizationServerConfigurer
     public OAuth2AuthorizationServerConf() {
         super();
     }
-    
+
     /**
      * Configure the security of the Authorization Server, which means in practical terms the /oauth/token endpoint. The
      * /oauth/authorize endpoint also needs to be secure, but that is a normal user-facing endpoint and should be
@@ -80,14 +80,15 @@ public class OAuth2AuthorizationServerConf extends AuthorizationServerConfigurer
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
         //super.configure(clients);
+        //初始化内存中一个client，定义好相关数据
+        //若需使用jdbc中的数据，实现ClientDetailsService接口
         clients.inMemory().withClient("my-client")
+                .secret("my-secret")
                 .resourceIds("my-rsc")
-                .authorizedGrantTypes("authorization_code", "implicit", "password", "client_credentials")
-                .authorities("ADMIN", "USER")
                 .scopes("login")
-                .accessTokenValiditySeconds(7200)
-                .secret("my-secret");
-                //.redirectUris("http://r.localhost:10011/o2/photo");
+                .authorizedGrantTypes("authorization_code", "implicit", "password", "client_credentials", "refresh_token")
+                .authorities("ADMIN", "USER")
+                .accessTokenValiditySeconds(3600);
     }
 
     /**

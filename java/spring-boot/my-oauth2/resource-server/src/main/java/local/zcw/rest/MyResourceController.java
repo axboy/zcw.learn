@@ -30,10 +30,8 @@ public class MyResourceController {
     @ResponseBody
     // OAuth2MethodSecurityExpressionHandler, OAuth2SecurityExpressionMethods, OAuth2Authentication
     //@PreAuthorize("#oauth2.hasScope('login')")      //#oauth2.clientHasRole,#oauth2.clientHasAnyRole
-
     /////Failed to evaluate expression '#oauth2.hasRole('ADMIN')'
-
-    @PreAuthorize("#oauth2.clientHasRole('ADMIN')")
+    //@PreAuthorize("#oauth2.hasScope('login')")
     //@CrossOrigin                //支持跨域请求
     public String photo() {
         return "this is a photo!must login";

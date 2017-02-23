@@ -40,7 +40,7 @@ public class WxController {
             //未登录
             url = "redirect:/choose";
         }
-        System.out.print(url);
+        System.out.println(url);
         return new ModelAndView(url);
     }
 
@@ -65,7 +65,7 @@ public class WxController {
     public ModelAndView login(String j_username, String j_password) {
         UserDetails user = userService.loadUserByUsername(j_username);
         if (!user.getPassword().equals(j_password)) {
-            throw new BadCredentialsException("密码错误");
+            throw new BadCredentialsException("密码错误，嘿嘿嘿");
         }
         Collection<? extends GrantedAuthority> authorities = user.getAuthorities();
         SecurityContextHolder securityContextHolder = new SecurityContextHolder();
