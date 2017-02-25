@@ -1,0 +1,132 @@
+#navsidebar{
+   float:left;
+   width:130px;
+   padding-left:10px;
+}
+#mylib_content{
+   float:right;
+   width:780px;
+   padding:5px;
+}
+#nav_mylib{
+   width:100px;
+   float:left;
+}
+#nav_mylib li{
+	float:left;
+	width:100px;
+	border-bottom:1px dashed #ccc;
+	padding:7px 0 6px 17px;
+	background-image: url(../images/icon_arr.gif);
+	background-repeat: no-repeat;
+	background-position: 5px center;
+}
+#nav_mylib li a{
+    color:#333333;
+}
+##nav_mylib li a:hover{
+	color:#0066cc;
+}
+li#nav_mylibhome{
+	font-weight:bold;
+	display:block;
+	background-color: #eee;
+}
+li#nav_mylibhome a{
+	color:#333;
+}
+
+#mylib_content h2{
+    border-bottom:1px dashed #ccc;
+	padding:5px;
+	margin-bottom:10px;
+	font-size:14px;
+	font-weight:bold;
+}
+#mylib_contenttag{
+   float:right;
+   width:690px;
+}
+#mylib_contenttag h2{
+   font-size:14px;
+   font-weight:bold;
+   padding:50px;
+}
+.mylib_con_con{
+   width:690px;
+   float:left;
+   padding-bottom:10px;
+}
+.iconerr{
+   position:relative;
+   top:-22px;
+   width:300px;
+   padding-left:10px;
+}
+.linetop{
+   border-top:1px solid #ccc;
+}
+#dz{
+   float:left;
+   width:670px;
+   padding:0 0 20px 10px;
+   margin-bottom:10px;
+}
+#dz li{
+   float:left;
+   clear:both;
+   height:23px;
+}
+.dz2{
+   float:left;
+   width:680px;
+}
+.dz2 li{
+  float:left;
+   width:157px;
+   padding:5px 3px 0 10px;
+}
+.panleft{
+   padding:0 0 0 10px;
+}
+
+.pan_top{
+   padding-top:150px;
+}
+#button_tag{
+  width:96%;
+  border-bottom:1px solid #c00;
+  padding:0 10px 0 10px;
+}
+#button_tag li{
+	float:left;
+	width:83px;
+	padding:5px;
+	text-align:center;
+	display:block;
+	font-weight:bold;
+	margin-right:5px;
+}
+#button_tag li a{
+	color:#bababa;
+	font-weight:bold;
+}
+#button_tag li a:hover{
+    color:#bababa;
+	font-weight:bold;
+}
+li#button_tagblue{
+	display:block;
+	background-color:#c00;
+}
+li#button_tagblue a{
+	color:#fff;
+	font-weight:bold;
+}
+li#utton_tagblue a:hover{
+    color:#fff;
+	font-weight:bold;
+}
+#mylib_content .blue{
+    color:#034ea2;
+}

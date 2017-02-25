@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-5-20 20:40:43 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="cn.edu.jxnu.x3104.team3.bean.FoodMaterial" table="Table_Food_Material">
+        <id name="food_material_id" type="java.lang.String" length="10">
+            <column name="food_material_id" not-null="true"/>
+            <generator class="assigned" />
+        </id>
+        <property name="food_material_name" type="java.lang.String" length="20">
+            <column name="food_material_name" not-null="true"/>
+        </property>
+        <property name="food_material_photo_link" type="java.lang.String" length="1000">
+            <column name="food_material_photo_link" not-null="false"/>
+        </property>
+        <property name="food_material_protein" type="int">
+            <column name="food_material_protein" />
+        </property>
+        <property name="food_material_sugar" type="int">
+            <column name="food_material_sugar" />
+        </property>
+        <property name="food_material_fat" type="int">
+            <column name="food_material_fat" />
+        </property>
+        <property name="food_material_dietary_fiber" type="int">
+            <column name="food_material_dietary_fiber" />
+        </property>
+        <property name="food_material_vc" type="int">
+            <column name="food_material_vc" />
+        </property>
+        <property name="food_material_calcium" type="int">
+            <column name="food_material_calcium" />
+        </property>
+        <property name="food_material_muriate" type="int">
+            <column name="food_material_muriate" />
+        </property>
+        <property name="food_material_natrium" type="int">
+            <column name="food_material_natrium" />
+        </property>
+        <property name="food_material_phosphorus" type="int">
+            <column name="food_material_phosphorus" />
+        </property>
+        <property name="food_material_calories" type="int">
+            <column name="food_material_calories" />
+        </property>
+    </class>
+</hibernate-mapping>

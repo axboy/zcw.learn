@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.edu.jxnu.x3104.riceroll.util.MyScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#e0e0e0"
+    android:fadingEdge="vertical"
+    android:scrollbars="vertical" >
+
+    <!-- 外层大框架 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <!-- 我的资料 -->
+
+        <LinearLayout
+            android:id="@+id/me_my_data"
+            android:layout_width="fill_parent"
+            android:layout_height="80dp"
+            android:background="#ffffff"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <!-- 用户头像 -->
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/user_logo" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <!-- 用户名 -->
+
+                <TextView
+                    android:id="@+id/me_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Unknow" />
+
+                <!-- 手机号 -->
+
+                <TextView
+                    android:id="@+id/me_tel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="182****9486" />
+            </LinearLayout>
+        </LinearLayout>
+
+     
+        <!-- 状态栏 -->
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="55dp"
+            android:background="#ffffff"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:text="减肥模式中"
+            android:textColor="#999"
+            android:textSize="16sp" />
+
+        <!-- 分割线 -->
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="14dp"
+            android:background="#aaaaaa" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#aaaaaa" />
+
+        <!-- 我的收藏 -->
+
+        <LinearLayout
+            android:id="@+id/me_downloaded_cookbook"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical"
+            android:background="#ffffff"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp" >
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/user_download" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="离线菜谱"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <!-- 分割线 -->
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#aaaaaa" />
+
+        <!-- 模式选择 -->
+
+        <LinearLayout
+            android:id="@+id/me_mode_select"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:background="#ffffff"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp" >
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/user_mode" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="模式选择"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <!-- 分割线 -->
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="14dp"
+            android:background="#aaaaaa" />
+
+        <!-- 分割线 -->
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#aaaaaa" />
+
+        <!-- 帮助中心 -->
+
+        <LinearLayout
+            android:id="@+id/me_help"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical"
+            android:background="#ffffff"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp" >
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/user_help" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="帮助中心"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <!-- 分割线 -->
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="14dp"
+            android:background="#aaaaaa" />
+        <!-- 分割线 -->
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#aaaaaa" />
+
+        <!-- 分享 -->
+
+        <LinearLayout
+            android:id="@+id/me_share"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:background="#ffffff"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp" >
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/user_share" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="分享"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <!-- 分割线 -->
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#aaaaaa" />
+
+        <!-- 反馈 -->
+
+        <LinearLayout
+            android:id="@+id/me_feedback"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:background="#ffffff"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp" >
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/user_feedback" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="反馈"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <!-- 分割线 -->
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="14dp"
+            android:background="#aaaaaa" />
+
+        <!-- 分割线 -->
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#aaaaaa" />
+
+        <!-- 注销 -->
+
+        <LinearLayout
+            android:id="@+id/me_logout"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical"
+            android:background="#ee0f0f"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="注销登录"
+                android:textColor="#fff"
+                android:textSize="19sp" />
+        </LinearLayout>
+
+        <!-- 分割线 -->
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="14dp"
+            android:background="#aaaaaa" />
+    </LinearLayout>
+
+</cn.edu.jxnu.x3104.riceroll.util.MyScrollView>

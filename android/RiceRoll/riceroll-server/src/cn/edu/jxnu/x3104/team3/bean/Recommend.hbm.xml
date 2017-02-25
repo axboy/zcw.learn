@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-6-13 14:05:27 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="cn.edu.jxnu.x3104.team3.bean.Recommend" table="Table_Recommend">
+        <id name="recommend_id" type="java.lang.String" length="9">
+            <column name="recommend_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="recommend_cookbook_name" type="java.lang.String" length="50" not-null="true">
+            <column name="recommend_cookbook_name" />
+        </property>
+        <property name="recommend_brief_introduction" type="java.lang.String" length="1000" not-null="true">
+            <column name="recommend_brief_introduction" />
+        </property>
+        <property name="recommend_reason" type="java.lang.String" length="1000" not-null="true">
+            <column name="recommend_reason" />
+        </property>
+        <property name="recommend_pictures_link" type="java.lang.String" length="1000" not-null="true">
+            <column name="recommend_pictures_link" />
+        </property>
+    </class>
+</hibernate-mapping>

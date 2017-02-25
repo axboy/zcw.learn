@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-6-3 14:37:04 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="cn.edu.jxnu.x3104.team3.bean.Cookbook" table="Table_Cookbook">
+        <id name="cookbook_id" type="java.lang.String" length="10">
+            <column name="cookbook_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="cookbook_name" type="java.lang.String" length="50">
+            <column name="cookbook_name" />
+        </property>
+        <property name="cookbook_keyword" type="java.lang.String" length="50">
+            <column name="cookbook_keyword" />
+        </property>
+        <property name="cookbook_brief_introduction" type="java.lang.String" length="1000">
+            <column name="cookbook_brief_introduction" />
+        </property>
+        <property name="cookbook_photo_link" type="java.lang.String" length="1000">
+            <column name="cookbook_photo_link" />
+        </property>
+        <property name="cookbook_tip" type="java.lang.String" length="1000">
+            <column name="cookbook_tip" />
+        </property>
+        <property name="cookbook_step" type="java.lang.String" length="1000">
+            <column name="cookbook_step" />
+        </property>
+        <property name="cookbook_food_material_id" type="java.lang.String" length="1000">
+            <column name="cookbook_food_material_id" />
+        </property>
+        <property name="cookbook_condiment_id" type="java.lang.String" length="1000">
+            <column name="cookbook_condiment_id" />
+        </property>
+        <property name="cookbook_click_time" type="int">
+            <column name="cookbook_click_time" />
+        </property>
+        <property name="cookbook_download_time" type="int">
+            <column name="cookbook_download_time" />
+        </property>
+        <property name="cookbook_collect_time" type="int" >
+            <column name="cookbook_collect_time" />
+        </property>
+    </class>
+</hibernate-mapping>

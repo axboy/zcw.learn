@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-6-16 21:46:50 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="cn.edu.jxnu.x3104.team3.bean.Admin" table="Table_Admin">
+        <id name="admin_id" type="java.lang.String" length="5">
+            <column name="admin_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="admin_name" type="java.lang.String" length="12" not-null="true">
+            <column name="admin_name" />
+        </property>
+        <property name="admin_password" type="java.lang.String" length="12" not-null="true">
+            <column name="admin_password" />
+        </property>
+        <property name="admin_mail_address" type="java.lang.String" length="50" not-null="true">
+            <column name="admin_mail_address" />
+        </property>
+         <property name="admin_phone_number" type="java.lang.String" length="12" not-null="true">
+            <column name="admin_phone_number" />
+        </property>
+        <property name="admin_authorize_authority" type="int" length="1" not-null="true">
+            <column name="admin_authorize_authority" />
+        </property>
+        <property name="admin_addcookbook_authority" type="int" length="1" not-null="true">
+            <column name="admin_addcookbook_authority" />
+        </property>
+        <property name="admin_addfoodmaterial__authority" type="int" length="1" not-null="true">
+            <column name="admin_addfoodmaterial__authority" />
+        </property>
+        <property name="admin_addrecommend__authority" type="int" length="1" not-null="true">
+            <column name="admin_addrecommend__authority" />
+        </property>
+        <property name="admin_addannouncement__authority" type="int" length="1" not-null="true">
+            <column name="admin_addannouncement__authority" />
+        </property>
+        <property name="admin_addcondiment__authority" type="int" length="1" not-null="true">
+            <column name="admin_addcondiment__authority" />
+        </property>
+    </class>
+</hibernate-mapping>

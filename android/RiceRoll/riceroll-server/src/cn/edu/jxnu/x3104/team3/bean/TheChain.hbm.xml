@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-5-20 20:40:43 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="cn.edu.jxnu.x3104.team3.bean.TheChain" table="Table_The_Chain">
+        <id name="the_chain_link_id" type="java.lang.String" length="10">
+            <column name="the_chain_link_id" not-null="true"/>
+            <generator class="assigned" />
+        </id>
+        <property name="the_chain_main_id" type="java.lang.String" length="10">
+            <column name="the_chain_main_id"  not-null="true"/>
+        </property>
+        <property name="the_chain_link" type="java.lang.String" length="10000">
+            <column name="the_chain_link" not-null="true"/>
+        </property>
+        <property name="the_chain_click_time" type="int">
+            <column name="the_chain_click_time" not-null="false"/>
+        </property>
+    </class>
+</hibernate-mapping>

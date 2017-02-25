@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-5-20 20:40:43 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="cn.edu.jxnu.x3104.team3.bean.User" table="Table_User" >
+        <id name="user_id" type="java.lang.String" length="12">
+            <column name="user_id"   not-null="true"/>
+            <generator class="assigned" />
+        </id>
+        <property name="user_name" type="java.lang.String" length="16">
+            <column name="user_name" not-null="true"/>
+        </property>
+        <property name="user_password" type="java.lang.String" length="15">
+            <column name="user_password" not-null="true"/>
+        </property>
+        <property name="user_registerDate" type="java.lang.String">
+            <column name="user_registerDate" not-null="true"/>
+        </property>
+        <property name="user_phonenumber" type="java.lang.String" length="11">
+            <column name="user_phonenumber" not-null="false"/>
+        </property>
+        <property name="user_address" type="java.lang.String" length="100">
+            <column name="user_address" not-null="false"/>
+        </property>
+        <property name="user_collection" type="java.lang.String" length="1000">
+            <column name="user_collection" not-null="false"/>
+        </property>
+        <property name="user_headimage" type="java.lang.String" length="50">
+            <column name="user_headimage" not-null="false"/>
+        </property>
+    </class>
+</hibernate-mapping>

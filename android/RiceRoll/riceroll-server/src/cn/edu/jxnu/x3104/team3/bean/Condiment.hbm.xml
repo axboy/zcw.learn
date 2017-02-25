@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-5-20 20:40:43 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="cn.edu.jxnu.x3104.team3.bean.Condiment" table="Table_Condiment">
+        <id name="condiment_id" type="java.lang.String" length="10">
+            <column name="condiment_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="condiment_name" type="java.lang.String" length="100">
+            <column name="condiment_name" not-null="true"/>
+        </property>
+        <property name="condiment_photo_link" type="java.lang.String" length="1000">
+            <column name="condiment_photo_link" />
+        </property>
+        <property name="condiment_protein" type="int">
+            <column name="condiment_protein" />
+        </property>
+        <property name="condiment_sugar" type="int">
+            <column name="condiment_sugar" />
+        </property>
+        <property name="condiment_fat" type="int">
+            <column name="condiment_fat" />
+        </property>
+        <property name="condiment_dietary_fiber" type="int">
+            <column name="condiment_dietary_fiber" />
+        </property>
+        <property name="condiment_vc" type="int">
+            <column name="condiment_vc" />
+        </property>
+        <property name="condiment_calcium" type="int">
+            <column name="condiment_calcium" />
+        </property>
+        <property name="condiment_muriate" type="int">
+            <column name="condiment_muriate" />
+        </property>
+        <property name="condiment_natrium" type="int">
+            <column name="condiment_natrium" />
+        </property>
+        <property name="condiment_phosphorus" type="int">
+            <column name="condiment_phosphorus" />
+        </property>
+        <property name="condiment_calories" type="int">
+            <column name="condiment_calories" />
+        </property>
+    </class>
+</hibernate-mapping>

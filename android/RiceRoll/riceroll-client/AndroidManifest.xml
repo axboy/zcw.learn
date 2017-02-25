@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.edu.jxnu.x3104.riceroll"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="17" />
+    
+    <!-- 选择要测试的包 -->
+    <!-- 
+    <instrumentation android:targetPackage=".start.AppStart"
+        android:name="android.test.InstrumentationTestRunner" />
+     -->
+    <!-- 用户权限管理 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>    
+    
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/user_logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        
+        <!-- 引入测试库 -->
+        <!-- 
+        <uses-library android:name="android.test.runner" />
+         -->
+        <activity
+            android:name=".start.AppStart"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <!-- start包 -->
+        <activity
+            android:name=".start.Test"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />        
+        <activity
+            android:name=".start.AppGuide"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name=".start.WebViewTestActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        
+        <!-- UI包 -->
+        <activity
+            android:name=".ui.UserLoginActivity"
+            android:theme="@android:style/Theme.DeviceDefault.Light.Dialog.NoActionBar.MinWidth"/>
+        <activity
+            android:name=".ui.UserRegisterActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name=".ui.MainWindowActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name=".ui.MainWindowActivityUnlogin"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name=".ui.DailyRecommendDetailActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name=".ui.MeFeedBackActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name=".ui.MeSettingActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name=".ui.MainPageSearchActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name=".ui.UserFridgeActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name=".ui.UserFridgeSelectActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name=".ui.MainPageFoodMaterialDetailActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name=".ui.MainPageCondimentDetailActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name=".ui.CookBookDetailActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name=".ui.CookBookDetailStepActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name=".ui.MeInfoActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name=".ui.DailyCookBookListActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+       
+        <!-- test包 -->
+         <activity
+            android:name="cn.edu.jxnu.x3104.riceroll.testcase.CondimentListActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name="cn.edu.jxnu.x3104.riceroll.testcase.CondimentDetailActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name="cn.edu.jxnu.x3104.riceroll.testcase.FoodMaterialListActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name="cn.edu.jxnu.x3104.riceroll.testcase.FoodMaterialDetailActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name="cn.edu.jxnu.x3104.riceroll.testcase.FridgeListActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />  
+        <activity
+            android:name="cn.edu.jxnu.x3104.riceroll.testcase.MyListViewTestActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar" /> 
+        <activity
+            android:name="cn.edu.jxnu.x3104.riceroll.testcase.TestHttp"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />     
+        <activity
+            android:name=".testcase.MainActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />   
+        
+    </application>
+
+</manifest>

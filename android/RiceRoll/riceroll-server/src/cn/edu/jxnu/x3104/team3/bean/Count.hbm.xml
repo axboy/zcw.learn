@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-6-3 14:42:44 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="cn.edu.jxnu.x3104.team3.bean.Count" table="Table_Count">
+        <id name="count_type" type="int">
+            <column name="count_type" />
+            <generator class="assigned" />
+        </id>
+        <property name="count_cookbook" type="int">
+            <column name="count_cookbook" />
+        </property>
+        <property name="count_condiment" type="int">
+            <column name="count_condiment" />
+        </property>
+        <property name="count_feedback" type="int">
+            <column name="count_feedback" />
+        </property>
+        <property name="count_food_material" type="int">
+            <column name="count_food_material" />
+        </property>
+        <property name="count_the_chain" type="int">
+            <column name="count_the_chain" />
+        </property>
+        <property name="count_recommend" type="int" not-null="true">
+            <column name="count_recommend" />
+        </property>
+        <property name="count_recommend_date" type="java.lang.String" not-null="true">
+            <column name="count_recommend_date" />
+        </property>
+    </class>
+</hibernate-mapping>

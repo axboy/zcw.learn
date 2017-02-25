@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns="http://java.sun.com/xml/ns/j2ee" 
+    xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" 
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" 
+    id="WebApp_9" version="2.4">
+  <display-name>RiceRoll</display-name>
+  <filter>
+    <filter-name>struts2</filter-name>
+    <filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>struts2</filter-name>
+    <url-pattern>/*</url-pattern><!-- 截获所有链接 -->
+  </filter-mapping>
+  <welcome-file-list>
+      <welcome-file>welcome.jsp</welcome-file>
+  </welcome-file-list>
+  <!-- 错误页面 -->
+	<error-page>
+		<error-code>404</error-code>
+		<location>/ERROR_PAGE/404.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>405</error-code>
+		<location>/ERROR_PAGE/405.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>500</error-code>
+		<location>/ERROR_PAGE/500.jsp</location>
+	</error-page>
+ <!--  <servlet>
+    <servlet-name>saveCode</servlet-name>
+    <servlet-class>jxnu.edu.cn.x3104.servelt.SafeCode</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>saveCode</servlet-name>
+    <url-pattern>/servlet.saveCode</url-pattern>
+  </servlet-mapping> -->
+</web-app>

@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<constant name="struts.multipart.saveDir"
+		value="\RiceRoll\WebContent\IMAGE\HEADIMG" />
+	<constant name="struts.i18n.encoding" value="GBK" />
+	<!-- 测试用包 -->
+	<package name="test" namespace="/test" extends="struts-default">
+		<action name="addlink" class="cn.edu.jxnu.x3104.team3.action.TestAction" method="addLink">
+		    <result name="success" type="redirect">/ERROR_PAGE/404.jsp</result>
+		</action>
+	</package>
+	<!-- 管理员用包 -->
+	<package name="admins" namespace="/admins" extends="struts-default">
+	    <!-- 以下代码用于解决取消下载时控制台提示异常，需要导入 
+	    struts2-sunspoter-stream-1.0.jar，并复制在/WEB-INF/lib下
+	          同时将result中的type改为streamx-->
+		<result-types>
+			<result-type name="streamx"
+				class="com.sunspoter.lib.web.struts2.dispatcher.StreamResultX" />
+		</result-types>
+		
+		<!-- 下载客户端 -->
+		<action name="download" class="cn.edu.jxnu.x3104.team3.action.DownloadAPPAction">
+			<result name="success" type="streamx">
+				<param name="contentType">application/octet-stream;charset=ISO8859-1</param>
+				<param name="contentDisposition">attachment;filename="JXNU_Library.apk"</param>
+				<param name="inputName">downloadFile</param>
+			</result>
+		</action>
+		
+		<!-- 管理员注册 -->
+		<action name="register" class="cn.edu.jxnu.x3104.team3.action.AdminRegisterAction"
+		     method="register">
+			<result name="success" type="redirectAction">
+				<param name="actionName">login</param> 
+         		<param name="namespace">/admins</param> 
+         		<param name="user_name">${admin_name}</param> 
+         		<param name="user_password">${admin_password}</param> 
+         		<param name="user_type">1</param> 
+			</result>
+			<result name="error" type="redirect">
+				<param name="location">/PAGE/JSP/register_result.jsp</param> 
+         		<param name="namespace">/admins</param> 
+         		<param name="result">${errorMsg}</param> 
+			</result>
+		</action>
+		
+		<!-- 管理员登录 -->
+		<action name="login" class="cn.edu.jxnu.x3104.team3.action.AdminLoginAction"
+		     method="login">
+			<result name="success" type="redirectAction">
+			    <param name="actionName">index</param> 
+				<param name="namespace">/admins</param> 
+			</result>
+			<result name="error" type="redirect">
+				<param name="location">/PAGE/JSP/login_result.jsp</param> 
+         		<param name="namespace">/admins</param> 
+         		<param name="result">${resultCode}</param> 
+			</result>
+		</action>
+		
+		<!-- 管理员注销 -->
+		<action name="logout" class="cn.edu.jxnu.x3104.team3.action.AdminLoginAction"
+		     method="logout">
+			<result name="success" type="redirect">
+				/PAGE/HTML/welcome.html
+			</result>
+		</action>
+		
+		<!-- 进入后台首页 -->
+		<action name="index" class="cn.edu.jxnu.x3104.team3.action.AdminGetInfoAction"
+		     method="getUserByCookies">
+			<result name="success" type="redirect">
+				<param name="location">/PAGE/JSP/admin/admin-index.jsp</param> 
+         		<param name="namespace">/admins</param> 
+         		<param name="name">${admin_name}</param>
+         		<param name="userNum">${userNum}</param>
+         		<param name="todayUserNum">${todayUserNum}</param>
+         		<param name="cookbookNum">${cookbookNum}</param>
+         		<param name="downloadNum">${downloadNum}</param> 
+         		<param name="rank">${rank}</param> 
+         		<param name="authority">${authority}</param>
+			</result>
+			<result name="error" type="redirect">
+				<param name="location">/PAGE/JSP/error.jsp</param> 
+         		<param name="namespace">/admins</param> 
+         		<param name="errorcode">${errorMsg}</param> 
+			</result>
+		</action>
+		
+		<!-- 进入管理员个人资料 -->
+		<action name="info" class="cn.edu.jxnu.x3104.team3.action.AdminGetInfoAction"
+		     method="getUserByCookies">
+			<result name="success" type="redirect">
+				<param name="location">/PAGE/JSP/admin/admin-user.jsp</param> 
+         		<param name="namespace">/admins</param> 
+         		<param name="name">${admin_name}</param>
+         		<param name="mail">${admin_mail_address}</param>
+         		<param name="phone">${admin_phone_number}</param>
+         		<param name="authority">${authority}</param>
+         		<param name="cookbook">${cookbook}</param>
+         		<param name="foodmaterial">${foodmaterial}</param> 
+         		<param name="announce">${announce}</param> 
+         		<param name="recommend">${recommend}</param> 
+         		<param name="condiment">${condiment}</param> 
+			</result>
+			<result name="error" type="redirect">
+				<param name="location">/PAGE/JSP/error.jsp</param> 
+         		<param name="namespace">/admins</param> 
+         		<param name="errorcode">${errorMsg}</param> 
+			</result>
+		</action>
+		
+		<!-- 管理员修改自身信息 -->
+		<action name="updateinfo" class="cn.edu.jxnu.x3104.team3.action.AdminUpdateInfoAction"
+		     method="UpdateInfo">
+			<result name="success" type="redirectAction">
+			    <param name="actionName">info</param> 
+				<param name="namespace">/admins</param> 
+			</result>
+			<result name="error" type="redirect">
+				<param name="location">/PAGE/JSP/error.jsp</param> 
+         		<param name="namespace">/admins</param> 
+         		<param name="errorcode">${errorMsg}</param> 
+			</result>
+		</action>
+		
+		<!-- 管理员获取菜谱列表 -->
+		<action name="getcookbooklist" class="cn.edu.jxnu.x3104.team3.action.AdminGetListAction"
+		     method="getCookbookList">
+			<result name="success" >
+			    /PAGE/JSP/admin/admin-cookbook-form.jsp	   
+			</result>
+			<result name="error" type="redirect">
+				<param name="location">/PAGE/JSP/error.jsp</param> 
+         		<param name="namespace">/admins</param> 
+         		<param name="errorcode">${errorMsg}</param> 
+			</result>
+		</action>
+		
+	</package>
+
+	
+	<!-- ****************************************分割线********************************************* -->
+		
+	
+	<!-- 用户包 -->
+	<package name="user" namespace="/user" extends="json-default">
+		<!-- 用户注册 -->
+		<action name="register"
+			class="cn.edu.jxnu.x3104.team3.action.UserRegisterAction" method="register">
+			<result type="json">
+				<!-- <param name="root">json_result</param> -->
+			</result>
+		</action>
+
+		<!-- 用户登录 -->
+		<action name="login" class="cn.edu.jxnu.x3104.team3.action.UserLoginAction"
+			method="login">
+			<result type="json">
+				<!-- <param name="root">json_result</param> -->
+			</result>
+		</action>
+
+		<!-- 用户更新食材表 -->
+		<action name="updatefoodmaterial"
+			class="cn.edu.jxnu.x3104.team3.action.UserUpdateFoodMaterial" method="UpdateFoodMaterial">
+			<result type="json">
+				<!-- <param name="root">json_result</param> -->
+			</result>
+		</action>
+
+		<!-- 用户更新调料表 -->
+		<action name="updatecondiment"
+			class="cn.edu.jxnu.x3104.team3.action.UserUpdateCondiment" method="UpdateCondiment">
+			<result type="json">
+				<!-- <param name="root">json_result</param> -->
+			</result>
+		</action>
+
+		<!-- 用户通过关键词搜索食谱 -->
+		<action name="searchcookbookbykeyword"
+			class="cn.edu.jxnu.x3104.team3.action.UserCookBookOperateAction"
+			method="SearchCookbookByKeyword">
+			<result type="json">
+				<!-- <param name="root">json_result</param> -->
+			</result>
+		</action>
+		
+		<!-- 用户通过菜谱名获取食谱信息 -->
+		<action name="getcookbookbyname"
+			class="cn.edu.jxnu.x3104.team3.action.UserCookBookProduceAction"
+			method="GetCookbookByName">
+			<result type="json">
+				<!-- <param name="root">json_result</param> -->
+			</result>
+		</action>
+
+		<!-- 用户通过勾选冰箱内食材搜索食谱 -->
+		<action name="searchcookbookbyfoodmaterial"
+			class="cn.edu.jxnu.x3104.team3.action.UserCookBookProduceAction"
+			method="SearchCookbookByKeyword">
+			<result type="json">
+				<!-- <param name="root">json_result</param> -->
+			</result>
+		</action>
+
+		<!-- 用户反馈 -->
+		<action name="feedback"
+			class="cn.edu.jxnu.x3104.team3.action.UserFeedbackAction" method="Feedback">
+			<result type="json">
+				<!-- <param name="root">json_result</param> -->
+			</result>
+		</action>
+
+		<!-- 用户修改自身信息 -->
+		<action name="updateuserinfo"
+			class="cn.edu.jxnu.x3104.team3.action.UserInfoOperateAction" method="UserInfoUpdate">
+			<result name="input">
+				UserInfoUpatetest.jsp
+			</result>
+			<result type="json">
+				<!-- <param name="root">json_result</param> -->
+			</result>
+			<interceptor-ref name="fileUpload">
+				<!--maximumSize (可选) - 这个拦截器允许的上传到action中的文件最大长度(以byte为单位). 注意这个参数和在webwork.properties中定义的属性没有关系,默认2MB -->
+				<param name="maximumSize">2097152</param>
+				<!--allowedTypes (可选) - 以逗号分割的contentType类型列表(例如text/html), 这些列表是这个拦截器允许的可以传到action中的contentType.如果没有指定就是允许任何上传类型. -->
+				<param name="allowedTypes">
+					image/png,image/jpg,image/jpeg
+				</param>
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack" />
+		</action>
+
+		<!-- 用户获取自身信息 -->
+		<action name="getuserinfo"
+			class="cn.edu.jxnu.x3104.team3.action.UserInfoOperateAction" method="GetUserInfo">
+			<result type="json">
+				<!-- <param name="root">json_result</param> -->
+			</result>
+		</action>
+
+		<!-- 用户CCD操作 -->
+		<action name="userCCD" class="cn.edu.jxnu.x3104.team3.action.UserCCDAction"
+			method="CCD">
+			<result type="json">
+				<!-- <param name="root">json_result</param> -->
+			</result>
+		</action>
+		
+		<!-- 用户刷新每日推荐 -->
+		<action name="getrecommenddaily" class="cn.edu.jxnu.x3104.team3.action.UserRecommendDailyAction"
+			method="GetRecommendDaily">
+			<result type="json">
+				<!-- <param name="root">json_result</param> -->
+			</result>
+		</action>
+	</package>
+
+</struts>

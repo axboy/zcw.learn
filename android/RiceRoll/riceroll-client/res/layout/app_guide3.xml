@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#1586FF"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+
+    <Button
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/startBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="startbutton"
+        android:text="随便看看"
+        android:textColor="#fff"
+        android:textSize="28sp" />
+
+
+</LinearLayout>

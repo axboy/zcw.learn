@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9 ]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>饭团管理员注册页面</title>
+
+
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<![endif]-->
+<link rel="alternate icon" type="images/ico" href="images/favicon.ico">
+<link href="css/normalize.css" rel="stylesheet" />
+<link href="css/jquery-ui.css" rel="stylesheet" />
+<link href="css/jquery.idealforms.min.css" rel="stylesheet"
+	media="screen" />
+
+<style type="text/css">
+.head {
+	width: 980px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 75px;
+	z-index: 100;
+}
+
+#head .mod-head {
+	float: left;
+	width: 330px;
+}
+
+#head .mod-head a {
+	width: 330px;
+	height: 76px;
+}
+
+#head .mod-head a img {
+	margin-top: 0px;
+}
+
+.login_link {
+	position: absolute;
+	top: 25px;
+	right: 200px;
+	color: #666;
+}
+
+.login_link .span {
+	float: left;
+	display: block;
+	margin-right: 5px;
+	margin-top: 10px;
+}
+
+.login_link .login_btn {
+	font-weight: bold;
+	color: #666;
+	height: 32px;
+	width: 64px;
+	border: none;
+	background: url(images/reg_button.png) no-repeat 0 -48px;
+}
+
+body {
+	font: normal 15px/1.5 Arial, Helvetica, Free Sans, sans-serif;
+	color: #222;
+	background: url(pattern.png);
+	overflow-y: scroll;
+	padding: 0 0 0 0;
+}
+
+#nav {
+	position: absolute;
+	top: 90px;
+	width: 100%; 
+	display : block;
+	background: none;
+	display: block;
+}
+
+#nav .nav-2 {
+	height: 20px;
+	background: url(images/nav.png) no-repeat center top;
+}
+
+#nav .nav-2 mod-nav clearfix {
+	zoom: 1;
+}
+
+#my-form {
+	width: 940px;
+	margin: 0 auto;
+	padding-top: 4em;
+	border-radius: 3px;
+
+}
+
+#comments {
+	width: 350px;
+	height: 100px;
+}
+
+.reg-sms{
+	position:absolute;
+	width:258px;
+	height:208px;
+	top:135px;
+	right:200px;
+	border: 1px solid #dleeff;
+	background-color: #f5fbff;
+}
+
+.reg-sms .reg-sms-title{
+	margin: 0 10px;
+	text-align: center;
+	height:50px;
+	line-height: 50px;
+	border-bottom: 1px solid #e6edf2;
+	font-size: 14px;
+	color:#666;
+}
+
+.reg-sms .reg-sms-p{
+	margin: 0 10px;
+}
+
+.reg-sms .reg-sms-p-text{
+	color:#666;
+	font-size: 12px;
+	margin-top: 20px;
+	margin-bottom: 5px;
+}
+
+.reg-sms .reg-sms-p-warn{
+	color:#f18300;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.reg-sms .reg-sms-p-last{
+	color:#666;
+	font-size: 12px;
+	margin-top: 5px;
+}
+
+</style>
+
+</head>
+<body>
+
+	<div class="head">
+		<div class="mod-head">
+			<a href="welcome.html"> <img src="images/logo_register.png"
+				alt="logo">
+			</a>
+		</div>
+	</div>
+
+	<div class="login_link">
+		<span>已有账号，现在就</span>
+		<button class="login_btn"
+			onclick="window.location.reload('login.html')">登录</button>
+	</div>
+
+	<div id="nav">
+		<div class="nav-2">
+			<div class="mod-nav clearfix"></div>
+		</div>
+	</div>
+
+	<div class="reg-sms">
+		<h3 class="reg-sms-title">注册须知</h3>
+		<div class="reg-sms-content" style="display: block;">
+			<p class="reg-sms-p reg-sms-p-text">用户名为：</p>
+			<p class="reg-sms-p reg-sms-p-warn">2-12位字符（支持数字/字母/符号）</p>
+			<p class="reg-sms-p reg-sms-p-text">登录密码为：</p>
+			<p class="reg-sms-p reg-sms-p-warn">5-15位字符 （支持数字/字母/符号）</p>
+			<p class="reg-sms-p reg-sms-p-last">所有栏目均为必填。</p>
+		</div>
+	</div>
+
+	<div class="row">
+
+		<div class="eightcol last">
+
+			<!-- Begin Form -->
+
+			<form id="my-form" name="register" method="post"
+				action="/RiceRoll/admins/register.action" onSubmit="return check();">
+
+				<div>
+					<label>用户名:</label><input id="username" name="admin_name"
+						type="text" />
+				</div>
+				<div>
+					<label>密码:</label><input id="pass" name="admin_password"
+						type="password" />
+				</div>
+				<div>
+					<label>确认密码:</label><input id="check_password"
+						name="admin_check_password" type="password" />
+				</div>
+				<div>
+					<label>邮箱:</label><input id="email" name="admin_mail_address"
+						data-ideal="required email" type="email" />
+				</div>
+				<div>
+					<label>手机号码:</label><input name="admin_phone_number" type="tel" />
+				</div>
+
+				<div>
+					<hr />
+				</div>
+
+				<div>
+					<input type="submit" value="提交"/>
+					<button id="reset" type="button">重置</button>
+				</div>
+
+			</form>
+
+			<!-- End Form -->
+
+		</div>
+
+	</div>
+
+
+	<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/jquery.idealforms.js"></script>
+	<script type="text/javascript">
+		function check() {
+			if (document.register.admin_name.value == "") {
+				alert("用户名不能为空!");
+				document.register.admin_name.focus();
+				return false;
+			}else{
+				return true;
+			}
+			if (document.register.admin_name.value != "") {
+				if ((document.register.admin_name.value).length > 12) {
+					alert("用户名长度不能超过12!");
+					document.register.admin_name.focus();
+				} else if ((document.register.admin_name.value).length < 2) {
+					alert("用户名长度不能低于2!");
+					document.register.admin_name.focus();
+				}
+				return false;
+			}else{
+				return true;
+			}
+			if (document.register.admin_password.value == "") {
+				alert("密码不能为空!");
+				document.register.admin_password.focus();
+				return false;
+			}else{
+				return true;
+			}
+			if (document.register.admin_password.value != "") {
+				if ((document.register.admin_password.value).length > 12) {
+					alert("密码长度不能超过12!");
+					document.register.admin_password.focus();
+				} else if ((document.register.admin_password.value).length < 5) {
+					alert("密码长度不能低于5!");
+					document.register.admin_password.focus();
+				}
+				return false;
+			}else{
+				return true;
+			}
+			if (document.register.admin_check_password.value == "") {
+				alert("确认密码不能为空!");
+				document.register.admin_check_password.focus();
+				return false;
+			}else{
+				return true;
+			}
+			if (document.register.admin_password.value != document.register.admin_check_password.value) {
+				alert("前后密码不一致!");
+				document.register.admin_check_password.focus();
+				return false;
+			}else{
+				return true;
+			}
+			if (document.register.admin_phone_number.value != "") {
+				nleng = (document.register.admin_phone_number.value).length;
+				if (nleng != 11) {
+					alert("手机号码必须为11位!");
+					document.register.admin_phone_number.focus();
+					return false;
+				}else{
+					return true;
+				}
+			} else {
+				alert("手机号码不能为空!");
+				document.register.admin_phone_number.focus();
+				return false;
+			}
+
+			if (document.register.admin_email_address.vlaue != "") {
+				var i = (document.register.admin_email_address.value)
+						.indexOf("@");
+				var j = (document.register.admin_email_address.value)
+						.indexOf(".");
+				if (i == -1 || j == -1 || i > j) {
+					alert("email格式不对！请重新输入！");
+					document.register.admin_email_address.value = ""
+					document.register.admin_email_address.focus();
+					return false;
+				}else{
+					return true;
+				}
+			} else {
+				alert("邮箱地址不能为空!");
+				document.register.admin_email_address.focus();
+			}
+		}
+	</script>
+	<script type="text/javascript">
+		var options = {
+
+			onFail : function() {
+
+			},
+
+			inputs : {
+				'admin_password' : {
+					filters : 'required pass',
+				},
+				'admin_check_password' : {
+					filters : 'required pass',
+				},
+				'admin_name' : {
+					filters : 'required username',
+					data : {}
+				},
+				'admin_phone_number' : {
+					filters : 'required phone',
+					data : {}
+				}
+			}
+
+		};
+
+		var $myform = $('#my-form').idealforms(options).data('idealforms');
+
+		$('#reset').click(function() {
+			$myform.reset().fresh().focusFirst()
+		});
+
+		$myform.focusFirst();
+	</script>
+	<div class="copy-box"
+		style="text-align: center; color: #7a77c8; margin-top: 50px">2015&nbsp;©RiceRoll</div>
+</body>
+</html>

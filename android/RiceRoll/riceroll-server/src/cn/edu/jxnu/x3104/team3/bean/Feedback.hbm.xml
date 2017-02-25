@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-5-20 20:40:43 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="cn.edu.jxnu.x3104.team3.bean.Feedback" table="Table_Feedback">
+        <id name="feedback_id" type="java.lang.String" length="12">
+            <column name="feedback_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="feedback_user_id" type="java.lang.String" length="12">
+            <column name="feedback_user_id" not-null="true"/>
+        </property>
+        <property name="feedback_content" type="java.lang.String" length="2000">
+            <column name="feedback_content" not-null="true"/>
+        </property>
+        <property name="feedback_date" type="java.lang.String" >
+            <column name="feedback_date" not-null="true"/>
+        </property>
+        <property name="feedback_keyword" type="java.lang.String" length="100">
+            <column name="feedback_keyword" not-null="true"/>
+        </property>
+        <property name="feedback_photo_link" type="java.lang.String" length="1000">
+            <column name="feedback_photo_link" not-null="false"/>
+        </property>
+    </class>
+</hibernate-mapping>
