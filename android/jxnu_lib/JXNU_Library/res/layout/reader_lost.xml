@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#fff">
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/title_bar"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="读者挂失"
+                android:textColor="#18b4ed"
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/reader_lost_back_to_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="《返回"
+                android:textColor="#18b4ed"
+                android:textSize="18sp" />
+        </RelativeLayout>
+        <LinearLayout 
+            android:layout_width="match_parent"
+    		android:layout_height="match_parent"
+    		android:gravity="center"
+    		android:orientation="vertical">
+            <ImageButton 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/not_found"/>
+            <TextView 
+                android:layout_width="match_parent"
+    			android:layout_height="wrap_content"
+    			android:layout_marginTop="20dp"
+    			android:textColor="#000"
+                android:textSize="18sp"
+                android:text="您确定要挂失吗？"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+            <TextView 
+                android:layout_width="match_parent"
+    			android:layout_height="wrap_content"
+    			android:layout_marginTop="20dp"
+    			android:textColor="#000"
+                android:textSize="18sp"
+                android:text="挂失后图书证将无法使用！"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+            <TextView 
+                android:layout_width="match_parent"
+    			android:layout_height="wrap_content"
+    			android:layout_marginTop="20dp"
+    			android:textColor="#000"
+                android:textSize="18sp"
+                android:text="不能自己解除挂失，需工作人员处理！"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+            <EditText 
+                android:id="@+id/reader_card_lost_password"
+                android:layout_width="match_parent"
+    			android:layout_height="40dp"
+    			android:layout_marginTop="20dp"
+    			android:textColor="#000"
+                android:textSize="18sp"
+                android:hint="(请输入密码)"
+                android:layout_gravity="center"
+                android:background="@drawable/editbox_shape"
+                android:password="true"
+                android:gravity="center"/>
+            <Button
+                android:id="@+id/reader_card_lost_enter"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+    			android:textColor="#000"
+                android:textSize="18sp"
+                android:hint="确定"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_style"
+                android:gravity="center"/>
+        </LinearLayout>
+    
+
+</LinearLayout>

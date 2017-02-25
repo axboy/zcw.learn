@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/menu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/title_bar"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="我的图书馆"
+            android:textColor="#18b4ed"
+            android:textSize="28sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center_vertical" >
+
+        <!-- 用户头像 -->
+
+        <cn.edu.jxnu.x3104.team3.jxnu_library.parameters.CircularImage
+            android:id="@+id/userheadimageview"
+            android:layout_width="80dp"
+            android:layout_height="100dp"
+            android:background="@drawable/account_headimg" />
+        <!-- 用户姓名 -->
+
+        <TextView
+            android:id="@+id/useridbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_toRightOf="@id/userheadimageview"
+            android:text="骚鹏"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/xian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/useridbox"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@id/userheadimageview"
+            android:text="————————————————"
+            android:textColor="#18b4ed"
+            android:textSize="10dp" />
+
+        <!-- 用户ID -->
+
+        <TextView
+            android:id="@+id/usernamebox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/xian"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@id/userheadimageview"
+            android:text="201267001023"
+            android:textSize="20dp" />
+    </RelativeLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#18b4ed" />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="20dp" 
+        android:background="#f0f0f0"/>
+    <Button
+        android:id="@+id/infobutton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:layout_weight="1"
+        android:background="@drawable/button_style"
+        android:text="个人信息                     >"
+        android:textSize="30dp" />
+        <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="20dp" 
+        android:background="#f0f0f0"/>
+    <Button
+        android:id="@+id/borrowbutton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:layout_weight="1"
+        android:background="@drawable/button_style"
+        android:text="图书续借                     >"
+        android:textSize="30dp" />
+        <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="20dp" 
+        android:background="#f0f0f0"/>
+    <Button
+        android:id="@+id/finebutton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:layout_weight="1"
+        android:background="@drawable/button_style"
+        android:text="借阅记录                     >"
+        android:textSize="30dp" />
+        <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="20dp" 
+        android:background="#f0f0f0"/>
+    <Button
+        android:id="@+id/reader_lost_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:layout_weight="1"
+        android:background="@drawable/button_style"
+        android:text="读者挂失                     >"
+        android:textSize="30dp" />
+        <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="20dp" 
+        android:background="#f0f0f0"/>
+    <Button
+        android:id="@+id/historybutton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:layout_weight="1"
+        android:background="@drawable/button_style"
+        android:text="检索历史                     >"
+        android:textSize="30dp" />
+        <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="20dp" 
+        android:background="#f0f0f0"/>
+    <Button
+        android:id="@+id/letterbutton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:layout_weight="1"
+        android:background="@drawable/button_style"
+        android:text="短信服务                     >"
+        android:textSize="30dp" />
+        <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="20dp" 
+        android:background="#f0f0f0"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#18b4ed" />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="60dp" 
+        android:layout_marginBottom="0dp"
+        android:background="#f0f0f0"/>
+
+</LinearLayout>

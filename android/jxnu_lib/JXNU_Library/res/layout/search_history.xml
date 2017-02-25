@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/title_bar"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/back_to_main7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="《返回"
+            android:textColor="#18b4ed"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="搜索历史"
+            android:textColor="#18b4ed"
+            android:textSize="28sp" />
+    </RelativeLayout>
+        <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="26dp"
+        android:background="#18b4ed"      
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/search_date_history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="检索时间"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+		<TextView
+		    android:id="@+id/line"
+            android:layout_width="1px"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/search_date_history"
+            android:gravity="center"
+            android:text="|"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+        <TextView
+            android:id="@+id/search_content_history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/line"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="检索内容"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+    </LinearLayout>>
+    <ListView
+        android:id="@+id/search_history_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

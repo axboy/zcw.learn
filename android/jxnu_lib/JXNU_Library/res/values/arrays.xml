@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="search_type">
+        <item>题名</item>
+        <item>责任者</item>
+        <item>出版社</item>
+        <item>丛书名</item>
+        <item>索书号</item>
+        <item>分类号</item>
+    </string-array>
+    <string-array name="search_type1">
+        <item>入藏日期</item>
+        <item>题名</item>
+        <item>责任者</item>
+        <item>出版社</item>
+        <item>丛书名</item>
+        <item>索书号</item>
+    </string-array>
+    <string-array name="search_type2">
+        <item>降序排列</item>
+        <item>升序排列</item>
+    </string-array>
+</resources>

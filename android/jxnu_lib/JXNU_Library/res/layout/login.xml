@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <!-- 顶栏 -->
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/title_bar"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="登     录"
+                android:textColor="#18b4ed"
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/login_back_to_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="《返回"
+                android:textColor="#18b4ed"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <!-- 学号栏 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center" >
+
+                <EditText
+                    android:id="@+id/Study_Number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/editbox_shape"
+                    android:drawableLeft="@drawable/account_headimg"
+                    android:hint="在此输入学号"
+                    android:inputType="number"
+                    android:maxLength="12" />
+            </LinearLayout>
+
+            <!-- 密码栏 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center" >
+
+                <EditText
+                    android:id="@+id/Password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/Study_Number"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/editbox_shape"
+                    android:drawableLeft="@drawable/password_headimg"
+                    android:hint="在此输入密码"
+                    android:maxLength="18"
+                    android:password="true" />
+            </LinearLayout>
+
+            <!-- 记住密码和登录按钮 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical" >
+                <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <CheckBox
+                    android:id="@+id/remb_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="记住密码" />
+                <CheckBox
+                    android:id="@+id/login_auto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="自动登录" />
+                </LinearLayout>
+                <Button
+                    android:id="@+id/Login_Button"
+                    android:layout_width="200dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/button_style"
+                    android:text="登  录"
+                    android:textSize="15dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

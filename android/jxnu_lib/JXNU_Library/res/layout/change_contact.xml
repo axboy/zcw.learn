@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#FFF">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/title_bar"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/back_to_main2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="《返回"
+            android:textColor="#18b4ed"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="修改联系信息"
+            android:textColor="#18b4ed"
+            android:textSize="28sp" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/c_email"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_weight="1"
+        android:background="@drawable/editbox_shape"
+        android:drawableLeft="@drawable/account_headimg"
+        android:hint="请输入您的Email" />
+
+    <EditText
+        android:id="@+id/c_number"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:background="@drawable/editbox_shape"
+        android:drawableLeft="@drawable/account_headimg"
+        android:hint="请输入您的电话"
+        android:inputType="number"/>
+
+    <EditText
+        android:id="@+id/c_phone"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:background="@drawable/editbox_shape"
+        android:drawableLeft="@drawable/account_headimg"
+        android:hint="请输入您的手机"
+        android:inputType="number"
+        android:maxLength="11" />
+
+    <EditText
+        android:id="@+id/c_post_code"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:background="@drawable/editbox_shape"
+        android:drawableLeft="@drawable/account_headimg"
+        android:hint="请输入您的邮编"
+        android:inputType="number"
+        android:maxLength="6" />
+
+    <EditText
+        android:id="@+id/c_address"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:background="@drawable/editbox_shape"
+        android:drawableLeft="@drawable/account_headimg"
+        android:hint="请输入您的住址" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="0dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/change_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:text="确定"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/change_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:text="返回"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+</LinearLayout>

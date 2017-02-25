@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/title_bar"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/search_result_no_content_back_to_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="《返回"
+            android:textColor="#18b4ed"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/search_result_no_content_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="...."
+            android:textColor="#18b4ed"
+            android:textSize="28sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_gravity="center_vertical" >
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/not_found_404" />
+        <TextView
+            android:id="@+id/search_result_no_content_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:text="您的该项记录为空！"
+            android:textSize="20dp"
+            android:textColor="#000" />
+    </LinearLayout>
+
+</LinearLayout>

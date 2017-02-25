@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/zd_search" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/s1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="题    名"
+            android:textColor="#18b4ed" />
+
+        <TextView
+            android:id="@+id/s2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="责任者"
+            android:textColor="#18b4ed" />
+
+        <TextView
+            android:id="@+id/s3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="出版社"
+            android:textColor="#18b4ed" />
+
+        <TextView
+            android:id="@+id/s4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="丛书名"
+            android:textColor="#18b4ed" />
+
+        <TextView
+            android:id="@+id/s5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="索书号"
+            android:textColor="#18b4ed" />
+
+        <TextView
+            android:id="@+id/s6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="分类号"
+            android:textColor="#18b4ed" />
+    </LinearLayout>
+
+    <!-- 滚动条 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp" >
+
+        <ImageView
+            android:id="@+id/cursor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="matrix"
+            android:src="@drawable/a" />
+    </LinearLayout>
+    <!-- 搜索框+搜索按钮 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="80dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/search_et"
+            android:layout_width="0dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="1dp"
+            android:layout_weight="4"
+            android:background="@drawable/editbox_shape"
+            android:drawableLeft="@drawable/img_blank"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/search_btn"
+            android:layout_width="0dp"
+            android:layout_height="41dp"
+            android:layout_weight="1"
+            android:background="@drawable/editbox_shape"
+            android:text="搜索" />
+    </LinearLayout>
+
+    <include layout="@layout/search_more" />
+
+</LinearLayout>

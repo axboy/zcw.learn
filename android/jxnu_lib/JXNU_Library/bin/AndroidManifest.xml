@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.edu.jxnu.x3104.team3.jxnu_library"
+    android:installLocation="auto"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="17" />
+
+    <uses-permission
+        android:id="@+id/usespermission1"
+        android:name="android.permission.INTERNET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".App_Start"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.Activity_Main_unlogin"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity android:name=".ui.Activity_gnxw" />
+        <activity
+            android:name=".ui.Activity_gnxw_detail"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name=".ui.Login"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name=".ui.TFSearchActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity android:name=".ui.TFSearchActivity_test" />
+        <activity
+            android:name=".ui.Search_result"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name=".ui.Search_detail"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name=".ui.Activity_Main"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name=".ui.Search_result_no_content"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name=".ui.MainTopRightDialog"
+            android:theme="@style/MyDialogStyleTop" />
+        <activity
+            android:name=".left_menu.Reader_Info"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name=".left_menu.Change_Contact"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name=".left_menu.Read_Permission"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name=".left_menu.Reader_Borrow"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name=".left_menu.Borrow_Cost"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name=".left_menu.Borrow_History"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name=".left_menu.Letter_Server"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name=".left_menu.Search_History"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name=".left_menu.Search_Result_History"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name=".left_menu.Reader_Lost"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name=".left_menu.Reader_Permission"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name=".left_menu.Borrow_Now"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+    </application>
+
+</manifest>
