@@ -1,0 +1,13 @@
+server:
+    port:8080
+
+srping:
+    datasource:
+        name:springboot-mybatis
+        url:jdbc:mysql://localhost:3306/springboot
+        username:root
+        password:root
+
+mybatis:
+    mapperLocations: classpath:mapper/*.xml
+    typeAliasesPackage: tk.mapper.model
