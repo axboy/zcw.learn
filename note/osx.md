@@ -2,6 +2,11 @@
 
 1. 触控板和鼠标滚轮分开设置滚动方向，安装Scroll Reverser。
 
+1. brew
+    ```
+        ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    ```
+
 1. 配置环境
     ```
         ######## jdk
