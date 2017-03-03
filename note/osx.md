@@ -36,12 +36,11 @@
     ```
 1. nginx
     ```
-        docker run -d -p 80:80 \
-            -v /Users/zcw/Soft/nginx:/etc/nginx/sites-enabled \
+        docker run -d -p 80:80 --name qh-nginx\
+            -v /Users/zcw/Soft/nginx:/etc/nginx/conf.d \
             -v /Users/zcw/Soft/nginx/logs:/var/log/nginx \
             -v /Users/zcw/work:/data nginx
     ```
-    在/Users/zcw/Soft/nginx路径下放server文件
 
 1. mysql
     ```
