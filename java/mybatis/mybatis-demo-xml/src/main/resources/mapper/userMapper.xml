@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="local.userMapper">
+
+    <resultMap id="userResultMap" type="User">
+        <id property="id" column="id"/>
+        <result property="username" column="username"/>
+        <result property="age" column="age"/>
+        <result property="sex" column="sex"/>
+    </resultMap>
+
+    <!-- 定义可重用的sql代码段，可以包含在其它sql语句中 -->
+    <sql id="userColumns">id,username,age,sex</sql>
+
+    <!-- 查询全部 -->
+    <select id="selectAll" resultType="hashMap">
+        SELECT
+        <include refid="userColumns"/>
+        FROM USER
+    </select>
+
+    <!-- 接受一个int类型参数，返回一个User对象 -->
+    <select id="selectById" parameterType="int" resultType="User">
+      SELECT * FROM USER WHERE ID = #{id}
+    </select>
+
+    <!-- FIXME 返回结果为1，但未插入成功 -->
+    <insert id="insertUser" parameterType="User">
+        INSERT INTO USER(id , username, age, sex)
+        VALUES(#{id}, #{username}, #{age}, #{sex})
+    </insert>
+
+    <!-- FIXME 返回结果为1，但未修改成功 -->
+    <update id="updateUser" parameterType="User">
+        UPDATE USER SET
+          USERNAME = #{username},
+          AGE = #{age},
+          SEX = #{sex}
+          WHERE id = #{id}
+    </update>
+
+    <delete id="deleteUser">
+        DELETE FROM USER WHERE id = #{id}
+    </delete>
+
+    <!-- 缓存，先随便设置
+     创建了一个 FIFO 缓存,并每隔 60 秒刷新,存数结果对象或列表的 512 个引用,而且返回的对象被认为是只读的,
+     因此在不同线程中的调用者之间修改它们会 导致冲突。
+    -->
+    <cache eviction="FIFO" flushInterval="60000" size="512" readOnly="true"/>
+</mapper>
