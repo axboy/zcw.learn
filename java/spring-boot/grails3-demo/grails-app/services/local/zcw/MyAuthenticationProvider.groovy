@@ -20,6 +20,7 @@ class MyAuthenticationProvider extends AbstractUserDetailsAuthenticationProvider
 
     @Override
     Authentication authenticate(Authentication authentication) throws AuthenticationException {
+        println("-----------")
         String username = authentication.getName();
         String password = (String) authentication.getCredentials();
         println("${username},${password}")
