@@ -17,7 +17,8 @@ public class Main {
         System.out.println(user.getUsername());
 
         User user1 = new User(3, "sss", 33, "man");
-        System.out.println("插入结果:" + userMapper.save(user1));  //FIXME 实际没有插入成功
+        System.out.println("插入结果:" + userMapper.save(user1));
+        session.commit();
 
         session.close();
     }

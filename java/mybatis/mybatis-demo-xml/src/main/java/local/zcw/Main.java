@@ -13,8 +13,8 @@ public class Main {
         User user = userDao.selectUserById(1);
         System.out.println(user.getUsername());
 
-        User user1 = new User(2, "sss", 33, "man");
-        //userDao.insertUser(user1);
-        userDao.updateUser(user1);
+        User user1 = new User(4, "333", 33, "man");
+        userDao.insertUser(user1);
+        //userDao.updateUser(user1);
     }
 }

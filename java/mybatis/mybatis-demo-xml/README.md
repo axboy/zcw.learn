@@ -2,7 +2,6 @@
 
 [官方文档](http://www.mybatis.org/mybatis-3/zh/index.html) 
 
-
 - 准备
     创建mybatis数据库，并执行一下sql语句
     ```
@@ -20,3 +19,7 @@
  
 - 运行
     运行main函数
+    
+### 注意
+
+    linux下mysql默认大小写敏感，win和osx不敏感

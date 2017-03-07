@@ -24,18 +24,16 @@
 
     <!-- 接受一个int类型参数，返回一个User对象 -->
     <select id="selectById" parameterType="int" resultType="User">
-      SELECT * FROM USER WHERE ID = #{id}
+      SELECT * FROM user WHERE ID = #{id}
     </select>
 
-    <!-- FIXME 返回结果为1，但未插入成功 -->
     <insert id="insertUser" parameterType="User">
-        INSERT INTO USER(id , username, age, sex)
+        INSERT INTO user(id , username, age, sex)
         VALUES(#{id}, #{username}, #{age}, #{sex})
     </insert>
 
-    <!-- FIXME 返回结果为1，但未修改成功 -->
     <update id="updateUser" parameterType="User">
-        UPDATE USER SET
+        UPDATE user SET
           USERNAME = #{username},
           AGE = #{age},
           SEX = #{sex}
@@ -43,7 +41,7 @@
     </update>
 
     <delete id="deleteUser">
-        DELETE FROM USER WHERE id = #{id}
+        DELETE FROM user WHERE id = #{id}
     </delete>
 
     <!-- 缓存，先随便设置
