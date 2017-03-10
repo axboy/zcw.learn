@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		012FBB641E71A03400D1C61C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 012FBB631E71A03400D1C61C /* main.m */; };
+		012FBB641E71A03400D1C61C /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 012FBB631E71A03400D1C61C /* main.mm */; };
 		012FBB6D1E71A5AE00D1C61C /* MyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 012FBB6C1E71A5AE00D1C61C /* MyObject.m */; };
+		015F66D51E729DE8009ED0D2 /* People.mm in Sources */ = {isa = PBXBuildFile; fileRef = 015F66D41E729DE8009ED0D2 /* People.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,9 +26,11 @@
 
 /* Begin PBXFileReference section */
 		012FBB601E71A03400D1C61C /* oc-helloworld */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "oc-helloworld"; sourceTree = BUILT_PRODUCTS_DIR; };
-		012FBB631E71A03400D1C61C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		012FBB631E71A03400D1C61C /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		012FBB6B1E71A22C00D1C61C /* MyObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyObject.h; sourceTree = "<group>"; };
 		012FBB6C1E71A5AE00D1C61C /* MyObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyObject.m; sourceTree = "<group>"; };
+		015F66D31E7290E9009ED0D2 /* People.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = People.h; sourceTree = "<group>"; };
+		015F66D41E729DE8009ED0D2 /* People.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = People.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +63,11 @@
 		012FBB621E71A03400D1C61C /* oc-helloworld */ = {
 			isa = PBXGroup;
 			children = (
-				012FBB631E71A03400D1C61C /* main.m */,
+				012FBB631E71A03400D1C61C /* main.mm */,
 				012FBB6B1E71A22C00D1C61C /* MyObject.h */,
 				012FBB6C1E71A5AE00D1C61C /* MyObject.m */,
+				015F66D31E7290E9009ED0D2 /* People.h */,
+				015F66D41E729DE8009ED0D2 /* People.mm */,
 			);
 			path = "oc-helloworld";
 			sourceTree = "<group>";
@@ -124,8 +129,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				015F66D51E729DE8009ED0D2 /* People.mm in Sources */,
 				012FBB6D1E71A5AE00D1C61C /* MyObject.m in Sources */,
-				012FBB641E71A03400D1C61C /* main.m in Sources */,
+				012FBB641E71A03400D1C61C /* main.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +258,7 @@
 				012FBB691E71A03400D1C61C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

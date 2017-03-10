@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "MyObject.h"
+#import "People.h"
 //#import <stdio.h>
 
 int main(int argc, const char * argv[]) {
@@ -20,10 +21,13 @@ int main(int argc, const char * argv[]) {
         int a = 1;
         printf("c output:%d\n",a);
         
+        printf("\n=============test cpp\n");
         //test cpp
-        //todo http://blog.csdn.net/jasonblog/article/details/7880841
+        //see http://blog.csdn.net/jasonblog/article/details/7880841
+        People* p = new People(14);
+        printf("people age:%d\n", p->getAge());
         
-        
+        printf("\n=============test oc obj\n");
         MyObject * obj = [MyObject new];
         NSString* str = @"hello world\n";
         
