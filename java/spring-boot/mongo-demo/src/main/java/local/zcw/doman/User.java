@@ -2,6 +2,9 @@ package local.zcw.doman;
 
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,17 +12,20 @@ import java.util.List;
 /**
  * Created by zcw on 2017/02/24.
  */
+@Document       //注解映射mongodb文档
 public class User {
 
-    @Id
+    @Id         //该属性为文档id
     private String id;
 
     private String username;
 
     private Integer age;
 
+    @Field("address")
     private Address address;
 
+    @DBRef
     private List<Role> roles = new ArrayList<Role>();
 
     /**
