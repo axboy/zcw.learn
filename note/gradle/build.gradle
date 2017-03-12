@@ -1,0 +1,15 @@
+//DefaultTask类型任务
+task helloWorld << {
+    println "--------hello world"
+}
+
+//指定类型，复制文件
+task copyFile(type: Copy){
+    from 'testFile.txt'
+    into 'dest.txt'         //这是目标文件夹
+}
+
+//任务依赖关系
+task taskA(dependsOn: helloWorld){
+    println "---taskA"
+}
