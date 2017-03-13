@@ -1,5 +1,6 @@
 package local.zcw.doman;
 
+import local.zcw.Common;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
@@ -13,10 +14,7 @@ import java.util.List;
  * Created by zcw on 2017/02/24.
  */
 @Document       //注解映射mongodb文档
-public class User {
-
-    @Id         //该属性为文档id
-    private String id;
+public class User extends Common{
 
     private String username;
 
@@ -38,13 +36,6 @@ public class User {
     }
 
     ////set,get方法
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
 
     public String getUsername() {
         return username;

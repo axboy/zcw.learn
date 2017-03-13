@@ -47,6 +47,8 @@ public class MongoDemoApplicationTests {
         roles.add(roleDao.findByName("ADMIN"));
         roles.add(roleDao.findByName("ROLE"));
         user.setRoles(roles);
+        user.setCreatedBy("CreatedByAAAA");
+        user.setLastModifiedBy("LastModifiedByBBBB");
         userDao.save(user);
     }
 }
