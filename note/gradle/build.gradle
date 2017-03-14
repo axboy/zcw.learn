@@ -10,6 +10,23 @@ task copyFile(type: Copy){
 }
 
 //任务依赖关系
+//先执行hello world，再执行taskA
+//fixme 实际结果先打印出了taskA
 task taskA(dependsOn: helloWorld){
     println "---taskA"
+}
+
+task testTask {
+    doFirst {
+        println "------do first"
+    }
+    println "do something"
+    doLast {
+        println "------do last"
+    }
+}
+
+task showTasks {
+    println("-----show tasks class = ${tasks.class}")
+    println "------tasks.size() = ${tasks.size()}"
 }
