@@ -23,3 +23,14 @@
 ### 注意
 
     linux下mysql默认大小写敏感，win和osx不敏感
+
+- docker中mysql区分大小写修改
+
+    [参考](http://linzr33.blog.163.com/blog/static/5738028201482953256877/)
+    
+    ```
+    apt-get update
+    apt-get install vim
+    vim /etc/mysql/mysql.conf.d/mysqld.cnf
+    # 追加一行：lower_case_table_names=1             1表示不区分大小写，2表示区分大小写
+    ```
