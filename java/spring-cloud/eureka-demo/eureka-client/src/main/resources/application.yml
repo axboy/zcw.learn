@@ -1,0 +1,11 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:10050/eureka/
+
+server:
+  port: 10051
+
+spring:
+  application:
+    name: eureka-demo-client
