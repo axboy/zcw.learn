@@ -1,0 +1,19 @@
+server:
+  port: 10080
+
+ribbon.eureka.enabled: false     #不使用注册中心
+
+spring:
+  # datasource
+  datasource:
+    url: jdbc:mysql://localhost:3306/test_db?characterEncoding=utf8&useSSL=true
+    username: root
+    password: 1234
+    driverClassName: com.mysql.jdbc.Driver
+
+  # Specify the DBMS
+  jpa:
+    database: MYSQL
+    show-sql: true
+    hibernate.ddl-auto: update
+    properties.hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
