@@ -1,0 +1,21 @@
+server:
+  port: 10060
+
+spring:
+  application:
+    name: server-zuul
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:10050/eureka/
+
+zuul:
+  routes:
+    api-v1:
+      path: /api/v1/**
+      serviceId: eureka-demo-client
+#      url: localhost:10051       #若不使用注册中心，可用url指定
+
+
+#ribbon.eureka.enabled: false     #不使用注册中心
