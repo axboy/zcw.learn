@@ -14,13 +14,10 @@ import java.io.IOException;
  */
 @WebServlet(name = "HomeServlet", urlPatterns = {"/home"})
 public class HomeServlet extends HttpServlet {
-    public HomeServlet() {
-        super();
-    }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doGet(req, resp);
+        //super.doGet(req, resp);       //fixme 不能加这行，why
         resp.setContentType("text/json; charset=UTF-8");
         resp.getOutputStream().write(req.getRequestURI().getBytes("utf-8"));
     }
