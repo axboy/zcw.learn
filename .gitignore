@@ -14,3 +14,5 @@ out
 .DS_Store
 .gradle
 .tmp
+bin/
+.settings/

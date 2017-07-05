@@ -1,7 +1,7 @@
 server:
   port: 10080
 
-ribbon.eureka.enabled: false     #²»Ê¹ÓÃ×¢²áÖĞĞÄ
+ribbon.eureka.enabled: false     #æ˜¯å¦ä»æ³¨å†Œä¸­å¿ƒè·å–
 
 spring:
   # datasource
