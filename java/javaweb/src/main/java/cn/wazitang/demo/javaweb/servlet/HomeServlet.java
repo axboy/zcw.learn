@@ -17,7 +17,7 @@ public class HomeServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        //super.doGet(req, resp);       //fixme 不能加这行，why
+        System.out.println("HomeServlet ==> doGet()");
         resp.setContentType("text/json; charset=UTF-8");
         resp.getOutputStream().write(req.getRequestURI().getBytes("utf-8"));
     }

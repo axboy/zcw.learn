@@ -7,22 +7,23 @@ import java.io.IOException;
 /**
  * 作者 zcw
  * 时间 2017/7/6 上午12:15
- * 描述 TODO
+ * 描述 copy on MyFilter
  */
+//FIXME 测试结果，多个filter，按类名（文件名不一致情况下未测试）字母顺序先后执行
 @WebFilter(urlPatterns = {"/home"})
-public class MyFilter implements Filter {
+public class HomeFilter implements Filter {
 
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
-        System.out.println("MyFilter ==> doFilter() ==> before");
+        System.out.println("HomeFilter ==> doFilter() ==> before");
         filterChain.doFilter(servletRequest, servletResponse);
-        System.out.println("MyFilter ==> doFilter() ==> after");
+        System.out.println("HomeFilter ==> doFilter() ==> after");
     }
 
     public void destroy() {
-        System.out.println("MyFilter ==> destroy()");
+        System.out.println("HomeFilter ==> destroy()");
     }
 
     public void init(FilterConfig filterConfig) throws ServletException {
-        System.out.println("MyFilter ==> init()");
+        System.out.println("HomeFilter ==> init()");
     }
 }
