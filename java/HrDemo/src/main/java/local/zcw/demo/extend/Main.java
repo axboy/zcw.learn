@@ -23,5 +23,15 @@ public class Main {
 
         Parent parent = new Child();
         parent.output();        //调用的是child.output()
+
+        System.out.println("========================分割线");
+
+        Parent p1 = new Parent();
+        System.out.println(p1 instanceof Child);
+        if(p1 instanceof Child){
+            Child c1 = (Child) p1;
+            System.out.println(c1.getClass());
+        }
+
     }
 }

@@ -7,6 +7,8 @@ class Child extends Parent {
 
     public String str = "this is child str";        //本类和父类的单独存储
 
+    public String childOnlyStr = "child only str";
+
     Child(){
         System.out.println("Child()");
     }
