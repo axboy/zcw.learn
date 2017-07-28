@@ -1,6 +1,6 @@
 # docker
 
-- [Dockerfile](https://docs.docker.com/engine/reference/builder/#from "docker docs")
+### [Dockerfile](https://docs.docker.com/engine/reference/builder/#from "docker docs")
 
 1. FROM
 
@@ -83,3 +83,21 @@
     将本地文件夹、其它容器文件夹挂载到容器中。
 
 1. WORKDIR
+
+### [rename image]()
+
+```
+docker tag IMAGE_ID docker.io/zengchw/NEW_IMAGE_NAME
+```
+
+### [login docker hub]()
+
+```
+docker login --username=zengchw --password=123456 --email=zcw1994@live.com
+```
+
+### [push image to docker hub]()
+
+```
+docker push docker.io/zengchw/xx-net
+```
