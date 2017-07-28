@@ -32,9 +32,7 @@ docker build . -t xx-net
 
 ```sh
 docker run -d --name xx-net \
-    -p 8085:8085 \
-    -p 8086:8086 \
-    -p 8087:8087 \
+    -p 8085-8087:8085-8087 \
     -v `pwd`/data:/data/XX-Net-3.3.1/data \
     xx-net
 ```
@@ -67,4 +65,10 @@ ip = 0.0.0.0
 port = 8087
 visible = 1
 debuginfo = 0
+```
+
+- 直接从docker hub获取镜像
+
+```
+docker pull zengchw/xx-net
 ```
