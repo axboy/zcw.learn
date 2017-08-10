@@ -1,0 +1,13 @@
+# dataSource
+spring.datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://wazitang.cn:3306/objmgt?characterEncoding=utf8&useSSL=true
+    username: root
+    password: root
+
+spring.datasource.
+
+custom.datasource:
+  names:
+    - ds1
+    - ds2
