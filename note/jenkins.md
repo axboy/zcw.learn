@@ -26,6 +26,13 @@ rm -f /etc/timezone
 echo "Asia/Shanghai" >> /etc/timezone
 ```
 
+- 管理员无权限、忘记密码
+
+
+    1. 编辑 ${JENKINS_HOME}/config，将 <useSecurity>true</useSecurity> 改为 false
+
+    2. 重启后启用注册，重新注册一个用户
+
 - ssh 插件
 
     系统管理→管理插件→可选插件→Artifact Uploaders→Publish Over SSH
