@@ -101,3 +101,45 @@ docker login --username=zengchw --password=123456 --email=zcw1994@live.com
 ```
 docker push docker.io/zengchw/xx-net
 ```
+
+### [docker api](https://docs.docker.com/engine/api/v1.29/)
+
+- centos
+
+    1. 编辑/lib/systemd/system/docker.service文件，ExecStart出追加如下参数
+
+        ```
+        --tls=false \
+        -H unix:///var/run/docker.sock \
+        -H tcp://0.0.0.0:2375
+        ```
+
+    1. 重启服务    
+        ```
+        systemctl daemon-reload
+        systemctl restart docker.service
+        ```
+
+    1. 若docker命令无法使用，在/etc/profile中添加（该问题未遇到）
+
+        ```
+        export DOCKER_HOST= 'http://0.0.0.0:2375'
+        ```     
+
+- ubuntu
+
+    ```
+    TODO
+    ```
+
+- mac
+
+    ```
+    TODO
+    ```
+
+- windows
+
+    ```
+    Settings --> General --> Expose daemon ... without TLS
+    ```
