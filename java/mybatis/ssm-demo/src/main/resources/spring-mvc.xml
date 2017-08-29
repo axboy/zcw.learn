@@ -9,6 +9,7 @@
 
     <!-- 自动扫描该包 @controller注解的类-->
     <context:component-scan base-package="local.zcw.ssm.rest"/>
+    <context:component-scan base-package="local.zcw.ssm.service"/>
 
     <!-- 静态资源处理 -->
     <mvc:default-servlet-handler/>
