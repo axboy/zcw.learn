@@ -19,9 +19,4 @@ public class TestScheculeTask {
     public void cronTask() {
         log.info("test schedule task start...");
     }
-
-    @Scheduled(fixedDelay = 1000)
-    public void fixedDelay() {
-        log.info("fixedDelay");
-    }
 }
