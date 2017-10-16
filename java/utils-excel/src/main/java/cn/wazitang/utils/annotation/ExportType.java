@@ -6,8 +6,8 @@ package cn.wazitang.utils.annotation;
  * 描述 导出数据格式
  */
 public enum ExportType {
-    DATE,
-    STRING,
-    NUM,
-    URL
+    DATE,       //Date,Long
+    STRING,     //String
+    NUM,        //? extends Number
+    URL         //String
 }
