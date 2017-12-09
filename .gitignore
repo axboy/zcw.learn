@@ -16,3 +16,5 @@ out
 .tmp
 bin/
 .settings/
+
+*.class
