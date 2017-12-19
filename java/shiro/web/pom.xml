@@ -5,9 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>local.zcw.demo.shiro</groupId>
-    <artifactId>chapter2</artifactId>
+    <artifactId>web</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <modules>
+        <module>../web-jdbc</module>
+    </modules>
+    <packaging>pom</packaging>
 
     <properties>
         <tomcat.path>/</tomcat.path>

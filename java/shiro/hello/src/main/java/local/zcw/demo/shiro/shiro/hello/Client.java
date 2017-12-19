@@ -1,4 +1,4 @@
-package local.zcw.demo.shiro.chapter1;
+package local.zcw.demo.shiro.shiro.hello;
 
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;

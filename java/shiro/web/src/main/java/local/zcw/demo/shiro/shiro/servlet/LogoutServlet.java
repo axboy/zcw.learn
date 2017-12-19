@@ -1,4 +1,4 @@
-package local.zcw.demo.shiro.chapter2.servlet;
+package local.zcw.demo.shiro.shiro.servlet;
 
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.IncorrectCredentialsException;
