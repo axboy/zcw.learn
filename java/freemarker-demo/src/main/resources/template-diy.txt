@@ -1,0 +1,9 @@
+# freemarker demo
+
+String: ${name}
+
+- Test
+
+<@diyLabel diyStr='asdf'>
+
+</@diyLabel>

@@ -1,0 +1,10 @@
+# first velocity
+
+hello $name
+
+# test
+
+- list:
+#foreach($str in $list)
+$str ,${str}, $!{str}
+#end

@@ -1,0 +1,14 @@
+# freemarker demo
+
+String: ${name}
+
+- Test
+
+<#list list as str>
+<#-- freemarker不支持空值 -->
+<#if str??>
+${str}
+<#else>
+null
+</#if>
+</#list>

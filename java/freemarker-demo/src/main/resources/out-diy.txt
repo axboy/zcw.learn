@@ -1,0 +1,7 @@
+# freemarker demo
+
+String: zcw
+
+- Test
+
+the diyStr of diy label is asdf
