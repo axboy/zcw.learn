@@ -1,0 +1,13 @@
+{
+  "name": "chapter3",
+  "version": "1.0.0",
+  "description": "node express demo",
+  "main": "app.js",
+  "author": "zcw",
+  "dependencies": {
+    "express": "latest"
+  },
+  "engines": {
+    "node": "*"
+  }
+}

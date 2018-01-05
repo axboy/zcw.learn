@@ -1,0 +1,13 @@
+{
+  "name": "chapter5",
+  "version": "1.0.0",
+  "description": "node mysql demo",
+  "main": "app.js",
+  "author": "zcw",
+  "dependencies": {
+    "mysql": "latest"
+  },
+  "engines": {
+    "node": "*"
+  }
+}

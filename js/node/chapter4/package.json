@@ -1,0 +1,13 @@
+{
+  "name": "chapter4",
+  "version": "1.0.0",
+  "description": "node http-proxy demo",
+  "main": "app_proxy.js",
+  "author": "zcw",
+  "dependencies": {
+    "http-proxy": "latest"
+  },
+  "engines": {
+    "node": "*"
+  }
+}
