@@ -10,5 +10,5 @@ import org.springframework.stereotype.Repository;
  * 描述 TODO
  */
 @Repository
-public interface RoleRepo extends JpaRepository<Role, String> {
+public interface RoleRepo extends JpaRepository<Role, Long> {
 }

@@ -10,5 +10,5 @@ import org.springframework.stereotype.Repository;
  * 描述 TODO
  */
 @Repository
-public interface DeptRepo extends JpaRepository<Dept, String> {
+public interface DeptRepo extends JpaRepository<Dept, Long> {
 }
