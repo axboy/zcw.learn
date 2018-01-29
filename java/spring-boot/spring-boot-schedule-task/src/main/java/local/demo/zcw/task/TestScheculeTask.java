@@ -15,7 +15,7 @@ public class TestScheculeTask {
 
     private static final Logger log = LoggerFactory.getLogger(TestScheculeTask.class);
 
-    @Scheduled(cron = "*/10 */1 * * * ?", zone = "Asia/Shanghai")
+    //@Scheduled(cron = "*/10 */1 * * * ?", zone = "Asia/Shanghai")
     public void cronTask() {
         log.info("test schedule task start...");
     }
