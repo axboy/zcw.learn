@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>client1</title>
+    <script src="./jquery-2.1.1.min.js"></script>
+</head>
+<body>
+<a href="#" onclick="get1()">get1</a>
+<img src="http://localhost:8080/test/get1"/>
+
+</body>
+
+<script>
+    let get1 = () => {
+        $.getJSON("http://localhost:8080/test/get1", (res) => {
+            console.log(res)
+        });
+    }
+</script>
+</html>
