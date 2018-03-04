@@ -16,10 +16,6 @@
 
 ### 单机安装
 
-todo
-
-### head插件
-
 - 跨域配置
 
 ```yml
@@ -27,11 +23,38 @@ http.cors.enabled: true
 http.cors.allow-origin: "*"
 ```
 
+### head插件
+
+- run
+
+```sh
+npm install
+npm run start
+```
+
+### Kibana
+
+- config
+
+```yml
+server.port: 5601
+server.host: "localhost"
+server.basePath: ""
+elasticsearch.url: "http://localhost:9201"
+```
+
+- run
+
+```sh
+bin/kibana
+```
+
 ### 集群安装
 
 - master config
 
 ```yml
+http.port: 9201
 cluster.name: test
 node.name: master
 node.master: true
@@ -41,7 +64,7 @@ network.host: 127.0.0.1
 - slave config
 
 ```yml
-http.port: 9201
+http.port: 9202
 cluster.name: test
 node.name: slave1
 network.host: 127.0.0.1
