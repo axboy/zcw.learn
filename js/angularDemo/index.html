@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body>
+ 
+<div ng-app="myApp" ng-controller="myCtrl">
+    <div>scope.name : {{name}}</div>
+    <div>vm.name : {{vm.name}}</div>
+    <div>vm.name : {{vm.name}}</div>
+
+    <ul>
+        <li ng-repeat="s in arr">{{s | testFilter}}</li>
+    </ul>
+</div>
+ <script src="./index.js"></script>
+</body>
+</html>

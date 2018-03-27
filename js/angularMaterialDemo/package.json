@@ -1,0 +1,14 @@
+{
+    "name": "angular-material-demo",
+    "version": "1.0.0",
+    "description": "angular material demo",
+    "main": "app.js",
+    "author": "zcw",
+    "dependencies": {
+        "express": "latest",
+        "angular": "^1.6.9",
+        "angular-animate": "^1.6.9",
+        "angular-aria": "^1.6.9",
+        "angular-material": "^1.1.8"
+    }
+}

@@ -17,4 +17,5 @@ out
 bin/
 .settings/
 
+js/angularMaterialDemo/node_modules/
 *.class
