@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://code.alibabatech.com/schema/dubbo
+       http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+    <!-- 这里dubbo的地址有修改，未使用官方demo的 http://dubbo.apache.org/，
+    本人使用这个地址一直不能启动，但官方demo可以启动，可能是dubbo版本不同吧 -->
+
+    <!-- 应用名，用于追踪依赖关系 -->
+    <dubbo:application name="demo-provider"/>
+
+    <!-- 使用ZooKeeper为注册中心 -->
+    <dubbo:registry address="zookeeper://localhost:2181"/>
+
+    <!-- dubbo服务端口配置 -->
+    <dubbo:protocol name="dubbo" port="20880"/>
+
+    <!-- 服务的具体实现 -->
+    <bean id="demoService" class="cn.axboy.demo.dubbo.hello.provider.DemoServiceImpl"/>
+
+    <!-- 声明暴露的服务 -->
+    <dubbo:service interface="cn.axboy.demo.dubbo.hello.api.IDemoService" ref="demoService"/>
+</beans>
